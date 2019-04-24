@@ -1,0 +1,241 @@
+<html>
+    <head>
+<title>Checkout</title>
+<link rel="stylesheet" type="text/css" href="main.css">  
+<!-- <script src="myscripts.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.googlemap/1.5.1/jquery.googlemap.min.js"></script>
+
+    </head>
+    <body>
+        <div class="container-checkout">
+            <div class="max1200">
+                <div class="checkout-left">
+                    
+                    <div class="max600">
+                        <div class="checkout-left-header">
+                            <div class="checkout-left-sub-header" onclick="customer()">01 customer info</div>
+                            <div class="checkout-left-sub-header opa5" onclick="shipping()">02 shipping info</div>
+                            <div class="checkout-left-sub-header opa5" onclick="payment()">03 payment info</div>
+                        </div>
+                        <div class="row" id="chapter1">
+                        <div class="row f_l15 mb_20">Customer Information</div>
+                        <div class="row">
+                            <div class="col l1_2 pr_5">
+                                    <div class="row f_l10 mb_5 txt_up">First Name</div>
+                                <input type="text" placeholder="" class="input-checkout "/>
+                            </div>
+                            <div class="col l1_2  pl_5">
+                                    <div class="row f_l10 mb_5 txt_up">Last Name</div>
+                                    <input type="text" placeholder="" class="input-checkout"/>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                                <div class="row f_l10 mb_5">ADDRESS</div>
+                                <input type="text" placeholder="" class="input-checkout"/>
+                        </div>
+                        <div class="row">
+                                <div class="col l1_2 pr_5">
+                                        <div class="row f_l10 mb_5 txt_up">Country</div>
+                                    <input type="text" placeholder="Select your Country" class="input-checkout "/>
+                                </div>
+                                <div class="col l1_2  pl_5">
+                                        <div class="row f_l10 mb_5 txt_up">City</div>
+                                        <input type="text" placeholder="" class="input-checkout"/>
+                                </div>
+    
+                            </div>
+                            <div class="row">
+                                    <div class="col l1_2 pr_5 poR">
+                                            <div class="row f_l10 mb_5 txt_up">Postal</div>
+                                        <div class="row poR">
+                                            <input type="text" placeholder="" class="input-checkout "/>
+                                        <div class="checkout-find">FIND</div>
+                                        </div>
+                                    </div>
+                                    <div class="col l1_2  pl_5">
+                                            <div class="row f_l10 mb_5 txt_up">Phone</div>
+                                            <input type="text" placeholder="" class="input-checkout"/>
+                                    </div>
+        
+                                </div>
+                                <div class="row">
+                                        <div class="col l1_2 lh40 f_l10 pr_5 poR">Return to Shop</div>
+                                        <div class="col l1_2  poR">
+                                            <div class="continue-button" onclick="shipping()">Continue to shopping</div>
+                                        </div>
+
+                                </div>
+                            </div>
+                            <div class="row dn" id="chapter2">
+                            <div class="row">
+                                    <div class="row f_l15 mb_20">Shipping Information</div>
+                                    <div class="row">
+                                        <div class="col l1_2 pxy_20 background_grey" style="border:1px solid #999;border-right:0px solid">
+                                            <div class="row f_l10 lh14">Janny Larsen</div>
+                                            <div class="row f_l10 lh14">Unit 2 Great Mount Retail Park</div>
+                                            <div class="row f_l10 lh14">Halifax</div>
+                                            <div class="row f_l10 lh14">Hax son</div>
+                                            <div class="row f_l10 lh14">Tel 9900373815</div>
+                                            <div class="row f_l10 color_blue lh14">Edit Address <span>. Add New</span></div>
+                                        </div>
+                                        <div class="col l1_2" style="border:1px solid #999">
+                                                <div id="map" style="width:300px;height:124px;background:grey"></div>  
+                                            </div>
+                                    </div>
+                                </div>
+                                <div class="row mt_20">
+                                        <div class="row f_l15 mb_20">Shipping Method</div>
+                                        <div class="row">
+                                            <div class="col l1_2 pxy_20 background_grey " style="border:1px solid #999;border-right:0px solid">
+                                                    <input type="radio" name="gender" value="male" style="position: absolute">
+                                                    <div class="row pl_20">
+                                                <div class="row f_l10 lh14">Standard delivery</div>
+                                                <div class="row f_l10 lh14">Estimated 14-20 days shipping</div>
+                                                <div class="row f_l10 lh14">Duties and taxes may be <br> due to upon delivery</div>
+                                               </div>
+                                            </div>
+                                            <div class="col l1_2 pxy_20 background_grey" style="border:1px solid #999;border-right:0px solid">
+                                                    <input type="radio" name="gender" value="male" style="position: absolute">
+                                                    <div class="row pl_20">   
+                                                <div class="row f_l10 lh14">Fast delivery</div>
+                                                    <div class="row f_l10 lh14">Estimated 14-20 days shipping</div>
+                                                    <div class="row f_l10 lh14">Duties and taxes may be <br> due to upon delivery</div>
+                                                   </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mt_20">
+                                            <div class="col l1_2 lh40 f_l10 pr_5 poR">Back to Customer Shop</div>
+                                            <div class="col l1_2  poR">
+                                                <div class="continue-button" onclick="payment()">Continue to shopping</div>
+                                            </div>
+    
+                                    </div>
+                                    </div>
+                                    <div class="row dn" id="chapter3"> 
+                                            <div class="row">
+                                                    <div class="row f_l15 mb_20">Payment Selection</div>
+                                                    
+                                                    <div class="row mt_20 pxy_20" style="border:1px solid #ebeced">
+                                                            <input type="radio" name="gender" value="male" style="position: absolute">
+                                                            <div class="row pl_20">
+                                                            <div class="row display_flex f_l10 pb_5">
+                                                                    <span class="">Credit Card  </span><span class="ml_a">m m</span>
+                                                                 </div>
+                                                                 <div class="row f_l10  mb_20">Safe money transfer using your bank account.Visa,Maestro,<br>Discover,American express</div>
+                                                            <div class="row pr_5 poR ">
+                                                                    <div class="row f_l10 mb_5 txt_up">Card Number</div>
+                                                                <div class="row poR">
+                                                                    <input type="num" placeholder="0000 0000 0000 0000" class="input-checkout "/>
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                    <div class="col l1_2 pr_5 poR">
+                                                                            <div class="row f_l10 mb_5 txt_up">Name On Card </div>
+                                                                        <div class="row poR">
+                                                                            <input type="text" placeholder="" class="input-checkout mb_0"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col l1_4 pr_5 poR">
+                                                                            <div class="row f_l10 mb_5 txt_up">Expiry Date</div>
+                                                                        <div class="row poR">
+                                                                            <input type="text" placeholder="MM/YY" class="input-checkout mb_0"/>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col l1_4 pr_5 poR">
+                                                                            <div class="row f_l10 mb_5 txt_up">CVV Code</div>
+                                                                        <div class="row poR">
+                                                                            <input type="text" placeholder="" class="input-checkout mb_0"/>
+                                                                        </div>
+                                                                    </div>
+
+                                                            </div>
+                                                    </div>
+                                                </div>
+                                                    <div class="row mt_20 pxy_20" style="border:1px solid #ebeced">
+                                                            <input type="radio" name="gender" value="male" style="position: absolute">
+                                                            <div class="row pl_20">
+                                                            <div class="row display_flex f_l10 pb_5">
+                                                                    <span class="">Pay pal  </span><span class="ml_a">m m</span>
+                                                                 </div>
+                                                                 <div class="row f_l10 ">Safe money transfer using your bank account.Visa,Maestro,<br>Discover,American express</div>
+                                                                </div> 
+                                                            </div> 
+                                                                </div>
+                                                </div>
+                    </div>
+                </div>
+                <div class="checkout-right">
+                    <div class="checkout-sub-right">
+                        <div class="row pb_15 brdBtm">
+                            <span>Shopping List</span>
+                            <span class="round-text f_l10">2</span>
+                        </div>
+                        <div class="row display_flex">
+                            <div class="card-image watch-image fleft"></div>
+                            <div class="row fleft mt_20 pl_10 flexdircol">
+                                <div class="row f_l12 pb_20 lh19">Watch</div>
+                                <div class="row f_l12 mt_a">99.99</div>
+
+                            </div>
+                        </div>
+                        <div class="row display_flex">
+                                <div class="card-image fleft bag-image"></div>
+                                <div class="row fleft mt_20 pl_10 flexdircol">
+                                    <div class="row f_l12 pb_20 lh19">Lightweight college backpack</div>
+                                    <div class="row f_l12 mt_a">99.99</div>
+    
+                                </div>
+                            </div>
+                            <div class="sub-head f_l12">Have a Voucher?</div>
+                            <div class="row f_l10 pb_10">
+                                <span class="fleft">Subtotal</span>
+                                <span class="fright">78.2</span>
+
+                            </div>
+                            <div class="row f_l10 pb_10 brdBtm">
+                                    <span class="fleft">Shipping</span>
+                                    <span class="fright">72.6</span>
+    
+                                </div>
+                                <div class="row f_l12 py_15">
+                                        <span class="fleft">Total</span>
+                                        <span class="fright">100</span>
+        
+                                    </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+              
+          function customer(){
+              $("#chapter1").removeClass("dn");
+              $("#chapter2").addClass("dn");
+              $("#chapter3").addClass("dn");
+          }    
+          function shipping(){
+              $("#chapter2").removeClass("dn");
+              $("#chapter1").addClass("dn");
+              $("#chapter3").addClass("dn");
+          }  
+          function payment(){
+              $("#chapter3").removeClass("dn");
+              $("#chapter2").addClass("dn");
+              $("#chapter1").addClass("dn");
+          }    
+function myMap() {  
+var mapOptions = {  
+    center: new google.maps.LatLng(51.5, -0.12),  
+    zoom: 10,  
+    mapTypeId: google.maps.MapTypeId.HYBRID  
+}  
+var map = new google.maps.Map(document.getElementById("map"), mapOptions);  
+}  
+</script>  
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>  
+    </body>
+</html>
